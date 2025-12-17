@@ -93,7 +93,9 @@ cat > $CHRT/etc/init.d/rcS << "EOF"
 #!/bin/sh
 mount -t proc proc /proc
 mount -t sysfs sysfs /sys
-exec /bin/sh
+mdev -s
+
+ln -sf /proc/mounts /etc/mtab
 EOF
 ```
 Make it executable:
