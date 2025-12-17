@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 6</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+	<button data-page="about">About</button>
+	<button data-page="projects">Projects</button>
+        <button data-page="contact">Contact Me</button>
+	<button onclick="window.location.href='blog.html';">Blog</button>
+	<button id="theme-toggle"></button>
+        <div id="about" class="page">
+          <div class="container">  
+            <div class="profile">
+	        <div class="piccontainer">
+                  <img src="cat.jpg" class="pic" alt="Why do I have tons of cat pics lol">
+	        </div>
+                <h2 class="name">Frost-Core</h2>
+	        <p>I'm Frost-Core, my favourite hobby is <span class="prog">programming</span>, i can definitely beat you in a <span class="dm">deathmatch</span>, tho ;).</p>
+		<button id="openMoreInfo">More info...</button>
+
+		<div id="moreInfo" class="modal">
+		  <div class="modal-content">
+		    <span class="close">&times;</span>
+		    <h2>Some more info about myself</h2>
+		    <p>You can find me on Twitter, Github, and other platforms. for more info on that.. <a href="#contact"><strong>Click here!</strong></a></p>
+		    <p>My favourite HTML tag is <code class="code-block">&lt;ul&gt;</code>!. It's pretty useful for lists.</p>
+		  </div>
+		</div>
+	    </div>
+          </div>
+        </div>  
+        <div id="projects" class="page" style="display:none;">
+          <div class="containerproj">
+            <div class="proj">
+		<h1>Current Project</h1>
+		<p>Learning HTML</p>
+		<h2>Past Projects include:</h2>
+		<p>LinuxDoom+ (mostly maintained), Doux kernel (on hold), my school project (I'm cooked)</p>
+		<h1>How done I am with these projects:</h1>
+		<div class="projbar">
+    	            <span>HTML Learning</span>
+                      <div class="progress-bar">
+      		         <div class="fill" data-percent="43">
+    		           <span class="percent-text">0%</span>
+                         </div>
+		      </div>
+  		</div>
+                <div class="projbar">
+                    <span>LinuxDoom+</span>
+                      <div class="progress-bar">
+                         <div class="fill" data-percent="45">
+			   <span class="percent-text">0%</span>
+			 </div>
+                      </div>
+                </div>
+            </div>
+	  </div>        
+        </div>
+	<div id="contact" class="page" style="display:none;">
+          <div class="containercnt">
+            <div class="cont">
+                <h1>Where to find me:</h1>
+		<p><strong>Twitter:</strong> @FrostC__</p>
+		<p><strong>Github:</strong> @FrostCoreAlt </p>
+		<p>Or, instead of wasting your time talking with me, tell me your favourite cats:</p>
+		<section>
+		    <input type="text" id="itemInput" placeholder="Enter a cat">
+	    	    <button onclick="addItemFromInput()">Add Cat</button>
+
+    		    <ul id="cats">
+                    </ul>
+		</section>
+            </div>
+          </div>
+        </div>
+  	<p class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Frost-Core.</p>
+  </body>
+</html>

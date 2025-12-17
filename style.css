@@ -1,0 +1,368 @@
+:root {
+  --bg: #0f0f0f;
+  --fg: #ffffff;
+}
+
+html.light {
+  --bg: #f9f9f9;
+  --fg: #000000;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Roboto, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+* {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.no-transition,
+.no-transition * {
+    transition: none !important;
+}
+.container {
+    display: grid;
+    place-items: center;
+    height: 87vh;
+}
+.containerproj {
+    display: grid;
+    place-items: center;
+    height: 87vh;
+}
+.containercnt {
+    display: grid;
+    place-items: center;
+    height: 87vh;
+}
+#theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+/* modal popups */
+.modal {
+    display: none; /* hidden by default */
+    position: fixed;
+    z-index: 1000; /* on top of everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* scroll if content is too tall */
+    background-color: rgba(0,0,0,0.5); /* semi-transparent background */
+}
+
+/* Modal box */
+.modal-content {
+    background-color: #1c1c1c;
+    color: #fff;
+    margin: 10% auto; /* centered vertically with some top spacing */
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+html.light .modal-content {
+    background-color: #eee;
+    color: #000;
+}
+/* Close button */
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: lightgray;
+}
+html.light .close:hover {
+    color: darkgray;
+}
+/* buttons */
+button {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border: 2px solid #333;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 1px 3px 4px black;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.1s ease;
+}
+
+/* hover / click feel */
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px black;
+}
+
+/* light theme button */
+html.light button {
+    background-color: #eaeaea;
+    color: #000000;
+    border-color: #ccc;
+    box-shadow: 1px 3px 4px #aaa;
+}
+
+.profile {
+    color: #d3d3d3;
+    padding: 20px;
+    border-radius: 10px;
+    width: 35%;
+    box-shadow: 1px 3px 4px black;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            transparent 40%,
+            #181818 40%,
+            #181818 100%
+        ),
+        url("bg.png");
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+html.light .profile {
+  color: #000000;  
+  background:
+     linear-gradient(
+	 to bottom,
+	 transparent 0%,
+	 transparent 40%,
+	 #f4f4f4 40%,
+	 #f4f4f4 100%
+	),
+	url("bg.png");
+  box-shadow: 1px 3px 4px #aaa;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.name {
+  text-align: center;
+  font-family: Helvetica, cursive, sans-serif; /* Horrible font choice but whatever */
+}
+.copyright {
+  font-family: Helvetica, sans-serif; /* Horrible font choice but whatever */
+  font-size: 15px;
+}
+footer, .copyright {
+  text-align: center;
+}
+.prog {
+  color: #ff0000;
+}
+.dm {
+  color: #0000ff;
+}
+.piccontainer {
+  width: 120px;
+  aspect-ratio: 1 / 1;   
+  border-radius: 50%;   /* makes it a circle */
+  overflow: hidden;     /* clips the image */
+  position: relative; 
+  top: 20px; 
+  margin: 0 auto;       /* center horizontally */
+  box-shadow: 1px 3px 4px black;
+  border: 4px solid #333;
+}
+
+html.light .piccontainer {
+   border: 4px solid #ccc;
+}
+
+.pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;       
+}
+input {
+  background-color: #1e1e1e;
+  padding: 12px 20px; 
+  margin: 8px 0; 
+  display: inline-block;
+  color: #eeeeee;
+  border: 1px solid #0d0d0d;
+  border-radius: 8px; 
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+html.light input {
+  background-color: #eee;
+  color: #333;
+  border: 1px solid #ccc;
+}
+.delete-btn {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  margin-left: 10px;
+  border: 2px solid #333;
+  padding: 3px 8px;
+  border-radius: 8px;
+}
+ul {
+  width: 30%;
+  padding: 10px 16px;
+  list-style-type: none;
+  background-color: #1c1c1c; 
+  border-radius: 10px;
+}
+html.light ul {
+  background-color: #f1f1f1;
+}
+li {
+  margin-bottom: 5px;
+}
+.skills {
+  width: 50%;
+  margin: 20px auto;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  background-color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 20px;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+}
+html.light .progress-bar {
+  background-color: #ccc;
+}
+
+.fill {
+  width: 0; /* start at 0 */
+  height: 100%;
+  border-radius: 8px;
+  background-color: #4caf50;
+  transition: width 1s ease; /* animate width */
+}
+.percent-text {
+  pointer-events: none;
+  user-select: none;
+}
+/* code */
+.code-block {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 16px 0;
+  overflow-x: auto;
+  box-shadow: inset 0 0 0 1px #222;
+}
+
+.code-block code {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.95em;
+  white-space: pre;
+}
+.code-block .hljs,
+.code-block .hljs * {
+    background: transparent !important; /* remove token backgrounds */
+}
+/* Dark mode: force light syntax text */
+html:not(.light) .code-block .hljs {
+  color: #d4d4d4;
+}
+
+html:not(.light) .hljs-keyword,
+html:not(.light) .hljs-selector-tag,
+html:not(.light) .hljs-literal {
+  color: #c586c0;
+}
+
+html:not(.light) .hljs-string,
+html:not(.light) .hljs-title,
+html:not(.light) .hljs-section {
+  color: #ce9178;
+}
+
+html:not(.light) .hljs-comment {
+  color: #6a9955;
+  font-style: italic;
+}
+
+html:not(.light) .hljs-number,
+html:not(.light) .hljs-symbol {
+  color: #b5cea8;
+}
+
+/* Light mode */
+html.light .code-block {
+  background-color: #f1f1f1;
+  box-shadow: inset 0 0 0 1px #ddd;
+}
+/* Light mode */
+html.light .code-block {
+  background-color: #f1f1f1;
+  box-shadow: inset 0 0 0 1px #ddd;
+}
+
+html.light .code-block code {
+  color: #333;
+}
+/* inline code (single backticks) */
+:not(pre) > code {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 16px 0;
+  overflow-x: auto;
+  box-shadow: inset 0 0 0 1px #222;
+}
+
+/* light mode inline code */
+html.light :not(pre) > code {
+  background-color: #f1f1f1;
+}
+
+/* styling */
+.post-box {
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: #111;
+}
+html.light .post-box {
+  border: 1px solid #ccc;
+   background: #f1f1f1;
+}
+.post-box h2 {
+  margin: 0 0 8px 0;
+}
+
+.post-date {
+  font-size: 0.85em;
+  color: #666;
+}
+
+.post-summary {
+  margin: 8px 0;
+}
+
+.post-box button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+

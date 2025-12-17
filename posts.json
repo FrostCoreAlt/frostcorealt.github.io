@@ -1,0 +1,8 @@
+[
+  {
+    "title": "Making a minimal musl Linux distro",
+    "file": "posts/making-minimal-musl-distro.md",
+    "summary": "Step-by-step guide to building a minimal Linux distro with musl, BusyBox, and a LTS kernel.",
+    "date": "2025-12-17"
+  }
+]
