@@ -14,7 +14,7 @@ This makes a chroot folder where we will setup everything, and also makes the ba
 #### Compiling the kernel
 Grab a kernel tarball, here I use 6.6.119 as it is the latest as of writing
 ```bash
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.119.tar.xz
+wget https://kernel.org/pub/linux/kernel/v6.x/linux-6.6.119.tar.xz
 tar xf linux-6.6.119.tar.xz
 ```
 After extracting, go in the directory and initialize the default config, which doesn't take long to build
